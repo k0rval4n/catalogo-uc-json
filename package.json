@@ -1,12 +1,13 @@
 {
   "name": "catalogo-uc-json",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Data fetcher for the course catalog of the Pontificia Universidad Católica de Chile (UC) in JSON format.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/k0rval4n/catalogo-uc-json.git"
   },
-  "main": "src/index.js",
+  "main": "src/index.cjs",
+  "module": "src/index.mjs",
   "type": "module",
   "scripts": {
     "dev": "node dev.js",

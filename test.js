@@ -1,4 +1,4 @@
-import { CourseDataParser } from "./src/index.js";
+import { CourseDataParser } from "./src/index.mjs";
 
 const SIGLA = "IIC2233";
 

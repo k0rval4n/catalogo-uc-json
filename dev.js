@@ -1,4 +1,4 @@
-import { CourseDataParser } from "./src/index.js";
+import { CourseDataParser } from "./src/index.mjs";
 import readline from "node:readline";
 
 const showData = async (sigla) => {
