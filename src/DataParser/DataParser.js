@@ -1,5 +1,3 @@
-import jsdom from "jsdom";
-
 class DataParser {
   constructor() {}
 
@@ -8,4 +6,4 @@ class DataParser {
   }
 }
 
-export { DataParser };
+module.exports = { DataParser };

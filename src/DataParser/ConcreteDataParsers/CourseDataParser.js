@@ -1,6 +1,6 @@
-import { DataParser } from "../DataParser.js";
-import { RequisitesDataParser } from "../ConcretePageDataParsers/RequisitesDataParser.js";
-import { ProgramDataParser } from "../ConcretePageDataParsers/ProgramDataParser.js";
+const { DataParser } = require("../DataParser.js");
+const { RequisitesDataParser } = require("../ConcretePageDataParsers/RequisitesDataParser.js");
+const { ProgramDataParser } = require("../ConcretePageDataParsers/ProgramDataParser.js");
 
 class CourseDataParser extends DataParser {
   constructor() {
@@ -27,4 +27,4 @@ class CourseDataParser extends DataParser {
   }
 }
 
-export { CourseDataParser };
+module.exports = { CourseDataParser };

@@ -1,5 +1,5 @@
-import { PageDataParser } from "../PageDataParser.js";
-import { PreParser } from "../../utils/PreParser.js";
+const { PageDataParser } = require("../PageDataParser.js");
+const { PreParser } = require("../../utils/PreParser.js");
 
 const BASE_URL =
   "https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo";
@@ -53,4 +53,4 @@ class ProgramDataParser extends PageDataParser {
   }
 }
 
-export { ProgramDataParser };
+module.exports = { ProgramDataParser };

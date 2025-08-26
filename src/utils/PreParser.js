@@ -25,4 +25,4 @@ class PreParser {
   }
 }
 
-export { PreParser };
+module.exports = { PreParser };

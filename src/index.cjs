@@ -1,4 +1,4 @@
-const CourseDataParser = require("./DataParser/ConcreteDataParsers/CourseDataParser");
+const { CourseDataParser } = require("./DataParser/ConcreteDataParsers/CourseDataParser");
 
 module.exports = {
   CourseDataParser,

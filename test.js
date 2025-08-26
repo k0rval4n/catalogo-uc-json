@@ -1,4 +1,4 @@
-import { CourseDataParser } from "./src/index.mjs";
+const { CourseDataParser } = require("./src/index.cjs");
 
 const SIGLA = "IIC2233";
 

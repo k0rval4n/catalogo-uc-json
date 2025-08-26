@@ -18,4 +18,4 @@ class TableParser {
   }
 }
 
-export { TableParser };
+module.exports = { TableParser };

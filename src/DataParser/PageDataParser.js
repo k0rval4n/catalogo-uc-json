@@ -1,5 +1,5 @@
-import { DataParser } from "./DataParser.js";
-import { PageFetcher } from "../PageFetcher/PageFetcher.js";
+const { DataParser } = require("./DataParser.js");
+const { PageFetcher } = require("../PageFetcher/PageFetcher.js");
 
 class PageDataParser extends DataParser {
   constructor(base_url) {
@@ -25,4 +25,4 @@ class PageDataParser extends DataParser {
   }
 }
 
-export { PageDataParser };
+module.exports = { PageDataParser };

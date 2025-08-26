@@ -1,4 +1,4 @@
-import jsdom from "jsdom";
+const jsdom = require("jsdom");
 
 class PageFetcher {
   constructor(base_url) {
@@ -20,4 +20,4 @@ class PageFetcher {
   }
 }
 
-export { PageFetcher };
+module.exports = { PageFetcher };

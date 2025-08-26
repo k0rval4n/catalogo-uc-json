@@ -1,5 +1,5 @@
-import { CourseDataParser } from "./src/index.mjs";
-import readline from "node:readline";
+const { CourseDataParser } = require("./src/index.cjs");
+const readline = require("node:readline");
 
 const showData = async (sigla) => {
   const courseDataParser = new CourseDataParser();
