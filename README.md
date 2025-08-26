@@ -23,7 +23,7 @@ Catalogo UC JSON is a data fetcher for the course catalog of the Pontificia Univ
 
 ### Install
 ```
-npm install @k0rval4n/catalogo-uc-json
+npm install catalogo-uc-json
 ```
 
 ### Use
