@@ -29,7 +29,7 @@ npm install catalogo-uc-json
 ### Use
 1. Import `CourseDataParser` in your project and use it:
    ```js
-    import { CourseDataParser } from "./index.js";
+    import { CourseDataParser } from "catalogo-uc-json";
 
     const SIGLA = "IIC2233";
 
