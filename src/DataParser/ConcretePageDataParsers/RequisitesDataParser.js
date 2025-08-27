@@ -59,6 +59,14 @@ class RequisitesDataParser extends PageDataParser {
     return table;
   }
 
+  async tryToGetData(sigla) {
+    try {
+      return await this.getData(sigla);
+    } catch (error) {
+      return { error: error.message };
+    }
+  }
+
   async getData(sigla) {
     const html = await this.getHTML(sigla);
     const dom = this.getDom(html);

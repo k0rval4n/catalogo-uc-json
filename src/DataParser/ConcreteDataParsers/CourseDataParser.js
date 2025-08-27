@@ -10,8 +10,15 @@ class CourseDataParser extends DataParser {
   }
 
   async getData(sigla) {
-    const requisitesData = await this.requisitesDataParser.getData(sigla);
-    const programData = await this.programDataParser.getData(sigla);
+    const requisitesData = await this.requisitesDataParser.tryToGetData(sigla);
+    const programData = await this.programDataParser.tryToGetData(sigla);
+
+    if (requisitesData.error) {
+      return {
+        sigla: sigla,
+        error: requisitesData.error,
+      };
+    }
 
     if (programData.error) {
       return {
