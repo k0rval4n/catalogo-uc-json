@@ -13,24 +13,16 @@ class CourseDataParser extends DataParser {
     const requisitesData = await this.requisitesDataParser.tryToGetData(sigla);
     const programData = await this.programDataParser.tryToGetData(sigla);
 
-    if (requisitesData.error) {
-      return {
-        sigla: sigla,
-        error: requisitesData.error,
-      };
-    }
-
-    if (programData.error) {
-      return {
-        sigla: sigla,
-        error: programData.error,
-      };
-    }
-
-    return {
+    const data = {
       ...requisitesData,
       ...programData,
     };
+
+    if (requisitesData.Error && programData.Error) {
+      data.Error = `${requisitesData.Error} | ${programData.Error}`;
+    }
+
+    return data;
   }
 }
 

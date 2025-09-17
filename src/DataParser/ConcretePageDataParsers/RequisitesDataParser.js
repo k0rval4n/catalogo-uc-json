@@ -1,6 +1,13 @@
 const { PageDataParser } = require("../PageDataParser.js");
 const { TableParser } = require("../../utils/TableParser.js");
 
+const DEFAULT_DATA = {
+  Prerequisites: "Not found",
+  Prerequisites_and_restrictions_relation: "Not found",
+  Restrictions: "Not found",
+  Equivalences: "Not found"
+};
+
 const BASE_URL =
   "https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo";
 const PREREQUISITES_AND_RESTRICTIONS_TABLE_SELECTOR =
@@ -63,7 +70,7 @@ class RequisitesDataParser extends PageDataParser {
     try {
       return await this.getData(sigla);
     } catch (error) {
-      return { error: error.message };
+      return { Error: error.message, ...DEFAULT_DATA };
     }
   }
 

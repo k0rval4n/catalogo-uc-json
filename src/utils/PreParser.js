@@ -16,9 +16,7 @@ class PreParser {
     });
 
     if (!("Sigla" in result)) {
-      return {
-        error: "Sigla not found",
-      };
+      throw new Error("Program not found for the given sigla");
     }
 
     return result;

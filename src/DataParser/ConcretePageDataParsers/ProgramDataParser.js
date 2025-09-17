@@ -1,6 +1,15 @@
 const { PageDataParser } = require("../PageDataParser.js");
 const { PreParser } = require("../../utils/PreParser.js");
 
+const DEFAULT_DATA = {
+  Course_name: "Not found",
+  Translation: "Not found",
+  Sigla: "Not found",
+  Credits: "Not found",
+  Modules: "Not found",
+  Course_nature: "Not found"
+};
+
 const BASE_URL =
   "https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo";
 const PRE_SELECTOR = "body > div.contentpane > div > pre";
@@ -47,7 +56,7 @@ class ProgramDataParser extends PageDataParser {
     try {
       return await this.getData(sigla);
     } catch (error) {
-      return { error: error.message };
+      return { Error: error.message, ...DEFAULT_DATA };
     }
   }
 
